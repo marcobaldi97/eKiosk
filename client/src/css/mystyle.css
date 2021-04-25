@@ -1,0 +1,132 @@
+.mainPanel {
+    padding: 5% 5% 5% 5%;
+}
+.fullPage {
+    height: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.flexBox {
+  display: flex;
+}
+
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+
+.letMeSomeSpace {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.iNeedMoreMargins {
+  margin: 1% 1% 1% 1%;
+}
+
+.selfContainedWellPadded{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+}
+
+.postCard{
+  max-height: 90vh;
+  min-height: 80vh;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.fatherCard {
+  display: flex;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.imgInPostCard {
+  height: 55vh;
+  max-width: 100%;
+}
+
+.imgInTable {
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.publicationWriterBorders{
+  border: 5px solid  #f8f9fa !important;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.respondClass {
+  width: 96vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.publicationWriterPost {
+  display: flex;
+  max-height: 80%;
+  max-width: 95%;
+}
+
+.publicationWriterImageSource {
+  display: flex;
+  max-height: 20%;
+  max-width: 95%;
+}
+
+.publicationCard3way {
+
+  max-height: 80%;
+}
+
+.mainCategoryRows {
+  display: flex;
+  height: 80%
+}
+
+.fatherImg{
+  height: 40vh;
+  max-width: 50vw;
+}
+
+.fatherImgExpand{
+  height: 80vh;
+  max-width: 90vw;
+}
+
+.previewImg {
+  min-height: 10vh;
+  min-width: 10vw;
+  max-height: 30vh;
+  max-width: 20vw;
+}
+.cardFather {
+  width: 96vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.c5pxmarginsbottom {
+  margin-bottom: 5px;
+}
+
+.c5pxmarginstop{
+  margin-top: 5px;
+}
