@@ -4,6 +4,7 @@ import './App.css';
 
 //my stuff ↓↓↓
 import Topnavbar from "./top-navbar/Topnavbar";
+import SingleitemViewer from "./products/singleItemViewer"
 //import PublicationWriter from './publications/PublicationWriter';
 //import PublicationViewer from './publications/PublicationViewer';
 //import MainCategory from './categories/MainCategory';
@@ -14,8 +15,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentView: '',
-      currentPostId: ''    
+      currentView: '',  
     };//this.state
     this.handleToUpdateState  = this.handleToUpdate.bind(this);
   }
@@ -25,8 +25,12 @@ class App extends React.Component {
   }
 
   render(){
+    const buttonNames = ["A","b","C"];//for testing
     return(
-      <Topnavbar></Topnavbar>
+      <div id="main">
+        <Topnavbar buttonNames={buttonNames}></Topnavbar >
+        <SingleitemViewer></SingleitemViewer>
+      </div>
     );
   };
 }
