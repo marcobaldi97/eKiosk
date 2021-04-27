@@ -4,11 +4,9 @@ Login de usuario
 Creación de producto
 Creación de compra
 Listado de todos los productos
-Realizacion compras
 Imprimir factura/ticket de compra
 Encriptar contraseñas en base de datos
 Encriptar contraseñas al ser enviadas mediante POST o GET
-Crear HTML de 404 error
 ---Developing 🧠:
-
+Crear HTML de 404 error
 ---Finished 🎉:
