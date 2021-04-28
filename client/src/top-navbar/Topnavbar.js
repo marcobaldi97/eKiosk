@@ -6,14 +6,15 @@ class Topnavbar extends React.Component {
     const nameOfButtons = this.props.buttonNames;
     const printedButtons = [];
     for (let i = 0; i < nameOfButtons.length; i++) {
-      printedButtons.push(<Nav.Link href={"#"+nameOfButtons[i]}>{nameOfButtons[i]}</Nav.Link>);
+      const snameOfButton = nameOfButtons[i];
+      printedButtons.push(<Nav.Link key={snameOfButton} href={"#"+snameOfButton} onClick={() => this.props.handlePage(snameOfButton)}>{nameOfButtons[i]}</Nav.Link>);
     }
     return printedButtons;
   }
 
   render(){
     return(
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary primaryAlter" variant="dark">
       <Navbar.Brand href="">eKiosk</Navbar.Brand>
       <Nav className="mr-auto">
         {this.printNavbarButtons()}

@@ -4,34 +4,51 @@ import './App.css';
 
 //my stuff ↓↓↓
 import Topnavbar from "./top-navbar/Topnavbar";
-import SingleitemViewer from "./products/singleItemViewer"
-//import PublicationWriter from './publications/PublicationWriter';
-//import PublicationViewer from './publications/PublicationViewer';
-//import MainCategory from './categories/MainCategory';
-//import PublicationSingleViewer from './publications/PublicationSingleViewer';
+import SingleitemViewer from "./products/SingleItemViewer";
+import ItemPage from "./products/ItemPage";
 //my stuff ↑↑↑
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentView: '',  
+      currentPage: '',  
     };//this.state
-    this.handleToUpdateState  = this.handleToUpdate.bind(this);
+    this.handlePage = this.handlePage.bind(this);
   }
 
-  handleToUpdate(someArg, post_id){
-    this.setState({currentView:someArg, currentPostId:post_id});
+  handlePage(page){
+    console.log("page");
+    this.setState({currentPage: page});
   }
-
+  
   render(){
-    const buttonNames = ["A","b","C"];//for testing
-    return(
-      <div id="main">
-        <Topnavbar buttonNames={buttonNames}></Topnavbar >
-        <SingleitemViewer></SingleitemViewer>
-      </div>
-    );
+    const buttonNames = ["List", "Test IPage"];//for testing
+    switch (this.state.currentPage) {
+      case "List":
+        return(
+          <div id="main">
+            <Topnavbar buttonNames={buttonNames} handlePage={this.handlePage}></Topnavbar >
+            <SingleitemViewer></SingleitemViewer>
+          </div>
+        );
+        break;
+      case "Test IPage":
+        return(
+          <div id="main">
+            <Topnavbar buttonNames={buttonNames} handlePage={this.handlePage}></Topnavbar >
+            <ItemPage></ItemPage>
+          </div>
+        );
+        break;
+      default:
+        return(
+          <div id="main">
+            <Topnavbar buttonNames={buttonNames} handlePage={this.handlePage}></Topnavbar >
+          </div>
+        );
+        break;
+    };
   };
 }
 export default App;

@@ -9,4 +9,6 @@ Encriptar contraseñas en base de datos
 Encriptar contraseñas al ser enviadas mediante POST o GET
 ---Developing 🧠:
 Crear HTML de 404 error
+Creación de componente a mostrar la venta de un producto en especifico
 ---Finished 🎉:
+Mejora visual componente de items (los que se van a listar)

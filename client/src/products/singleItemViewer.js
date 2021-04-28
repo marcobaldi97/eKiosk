@@ -18,19 +18,18 @@ class SingleitemViewer extends React.Component {
             <Container fluid>
                 <Row>
                     <Col>
-                        <Card.Img className="" variant="top" src="https://http2.mlstatic.com/D_NQ_NP_650934-MLB31124466602_062019-O.jpg" />
+                        <Card.Img className="itemImg" variant="top" src="https://http2.mlstatic.com/D_NQ_NP_650934-MLB31124466602_062019-O.jpg" />
                     </Col>
                     <Col>
                         <Card.Body>
-                            <Card.Title>{this.state.productName}</Card.Title>
+                            <Card.Title className="itemTitle">{this.state.productName}</Card.Title>
                             <Card.Text>
                                 {this.state.productDesc}
                             </Card.Text>
-                            <Button variant="primary">Buy!</Button>
+                            <Button variant="primary primaryAlter">Buy!</Button>
                         </Card.Body>
                     </Col>
                 </Row>
-                
             </Container>
             </Card>
         );
