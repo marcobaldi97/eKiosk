@@ -1,6 +1,5 @@
 const { json } = require('express');
 const  {Pool, Client} = require('pg');
-
 module.exports = class DataBaseMediator{ 
     constructor (){
         let lastSelectDBResponse;

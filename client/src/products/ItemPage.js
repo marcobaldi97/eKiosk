@@ -30,7 +30,7 @@ class ItemPage extends React.Component {
                             <Carousel.Item>
                                 <img
                                 className="d-block w-100"
-                                src="holder.js/800x400?text=Second slide&bg=282c34"
+                                src="https://i.pinimg.com/originals/21/f7/d7/21f7d7bce9eaeb6437011b33ee5f0454.png"
                                 alt="Second slide"
                                 />
                             </Carousel.Item>
