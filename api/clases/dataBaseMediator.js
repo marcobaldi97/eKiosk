@@ -9,7 +9,7 @@ module.exports = class DataBaseMediator{
         const dbPassword = 'basedMaster97';
         const dbIp = 'localhost';
         const dbPort = 5432;
-        const dbName = 'fargus_project_db';
+        const dbName = 'eKioskDB';
         const connectionString = 'postgressql://'+dbUser+':'+dbPassword+'@'+dbIp+':'+dbPort+'/'+dbName;
         this.client = new Client({
             connectionString: connectionString
@@ -62,21 +62,3 @@ module.exports = class DataBaseMediator{
         return this.lastDeleteDBResponse;
     }
 }//final clase
-
-
-/*
-try{ 
-    (async () => {
-        let a = new dataBaseMediator();
-        await a.executeSelectConsult('SELECT * FROM publications');
-        let b = a.getLastSelectDBResponse();
-        console.log('↓↓↓↓↓↓ This is your response ↓↓↓↓↓↓');
-        var i;
-        for (i = 0; i < b.length; i++) {
-            console.log('El id es: '+b[i].publication_id+' El contenido es:'+b[i].publication_content);
-        }
-    })()   
-}catch(error){
-    console.error(error);
-}
-*/
