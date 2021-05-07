@@ -3,3 +3,4 @@ client/package-lock.json
 client/package.json
 afdmin.js
 test.py
+api/clases/dataBaseMediator.js

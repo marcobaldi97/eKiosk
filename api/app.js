@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");//Creo el router que voy a probar.
 var publicationsRouter = require("./routes/publications")
-
+//var itemsPublicationRouter = require("./routes/itemsPublications")
 var app = express();
 
 // view engine setup
@@ -27,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Debajo de esta linea es donde debo pegar las nuevas direcciones X que haga en /routes . Ej.: /routes/X.js
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/users/login/', usersRouter);
+app.use('/users/addUser/', usersRouter);
 app.use("/testAPI", testAPIRouter);
 app.use("/publications", publicationsRouter);
 app.use("/publications/publish/", publicationsRouter);
@@ -34,6 +36,9 @@ app.use("/publications/list/", publicationsRouter);
 app.use("/publications/deletePost/", publicationsRouter);
 app.use("/publications/viewSinglePost/", publicationsRouter);
 app.use("/publications/viewSinglePostResponses/", publicationsRouter);
+//app.use("/itemsPublications/listItems/",itemsPublicationRouter);
+//app.use("/itemsPublications/listSingleItem/",itemsPublicationRouter);
+//app.use("/itemsPublications/addItem/",itemsPublicationRouter);
 //---------------------------------------------------------
 
 // catch 404 and forward to error handler
