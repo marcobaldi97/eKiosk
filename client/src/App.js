@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 
 //my stuff ↓↓↓
+import AddUser from "./users/AddUser"
 import Login from "./users/Login"
 import Topnavbar from "./top-navbar/Topnavbar";
 import SingleitemViewer from "./products/SingleItemViewer";
@@ -13,7 +14,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentPage: 'login',  
+      currentPage: 'addUser',  
     };//this.state
     this.handlePage = this.handlePage.bind(this);
   }
@@ -47,6 +48,13 @@ class App extends React.Component {
           <div id="main">
             <Topnavbar buttonNames={buttonNames} handlePage={this.handlePage}></Topnavbar >
             <Login></Login>
+          </div>
+        );
+        case "addUser":
+        return(
+          <div id="main">
+            <Topnavbar buttonNames={buttonNames} handlePage={this.handlePage}></Topnavbar >
+            <AddUser></AddUser>
           </div>
         );
       default:
