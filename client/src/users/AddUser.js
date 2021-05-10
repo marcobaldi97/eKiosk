@@ -32,10 +32,10 @@ class AddUser extends React.Component{
             .post('/users/checkEmail/',params)
             .then(response => {
                 if(response.data==="Usuario Disponible"){
-                    alert("Email Diponible");
+                    //alert("Email Diponible");
                     this.setState({emailDisp:true});
                 }else{
-                    alert("Email Tomado")
+                    //alert("Email Tomado")
                     this.setState({emailDisp:false})
                 }
             })
@@ -48,8 +48,8 @@ class AddUser extends React.Component{
         this.setState({pass:event.target.value});
     };
     handleBlurP(event){
-        if(this.state.pass === "")
-            alert("Pass vacía")
+        //if(this.state.pass === "")
+            //alert("Pass vacía")
     };
     handleChangeP2(event){
         this.setState({pass2:event.target.value});
@@ -57,7 +57,7 @@ class AddUser extends React.Component{
     handleBlurP2(event){
         console.log(this.state.pass+" ## "+this.state.pass2);
         if(this.state.pass !== this.state.pass2){
-            alert("Las contraseñas son diferentes, capo")
+            //alert("Las contraseñas son diferentes, capo")
         }
     };
     handleChangeN(event){
@@ -90,33 +90,37 @@ class AddUser extends React.Component{
       }
       render(){
         return(
-          <Form>
-          <Form.Group controlId="formEmail">
-            <Form.Label>Correo Electrónico</Form.Label>
-            <Form.Control type="email" placeholder="Ingrese correo aquí" value={this.state.email} onChange={this.handleChangeE} onBlur={this.handleBlurE}/>
-          </Form.Group>
-          <Form.Group controlId="formNombre">
-            <Form.Label>Nombre</Form.Label>
-            <Form.Control placeholder="Ingrese correo aquí" value={this.state.nombre} onChange={this.handleChangeN}/>
-          </Form.Group>
-        
-          <Form.Group controlId="formPassword">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control type="password" placeholder="Contraseña" value={this.state.pass} onChange={this.handleChangeP} onBlur={this.handleBlurP}/>
-          </Form.Group>
+        <div className="addUserContainer">
+            <Form>
+                <Form.Group controlId="formEmail">
+                    <Form.Label>Correo Electrónico</Form.Label>
+                    <Form.Control type="email" placeholder="Ingrese correo aquí" value={this.state.email} onChange={this.handleChangeE} onBlur={this.handleBlurE}/>
+                </Form.Group>
+                <Form.Group controlId="formNombre">
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control placeholder="Ingrese correo aquí" value={this.state.nombre} onChange={this.handleChangeN}/>
+                </Form.Group>
+                
+                <Form.Group controlId="formPassword">
+                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Control type="password" placeholder="Contraseña" value={this.state.pass} onChange={this.handleChangeP} onBlur={this.handleBlurP}/>
+                </Form.Group>
 
-          <Form.Group controlId="formPassword2">
-            <Form.Label>Repita Contraseña</Form.Label>
-            <Form.Control type="password" placeholder="Repita Contraseña" value={this.state.pass2} onChange={this.handleChangeP2} onBlur={this.handleBlurP2}/>
-          </Form.Group>
+                <Form.Group controlId="formPassword2">
+                    <Form.Label>Repita Contraseña</Form.Label>
+                    <Form.Control type="password" placeholder="Repita Contraseña" value={this.state.pass2} onChange={this.handleChangeP2} onBlur={this.handleBlurP2}/>
+                </Form.Group>
 
-          <Form.Group controlId="formLogout">
-            <Form.Check type="checkbox" label="No cerrar Sesión" />
-          </Form.Group>
-          <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-            Submit
-          </Button>
-        </Form>
+                <Form.Group controlId="formLogout">
+                    <Form.Check type="checkbox" label="No cerrar Sesión" />
+                </Form.Group>
+                <div className='buttonCenter'>
+                    <Button  variant="primary" type="submit" onClick={this.handleSubmit}>
+                        Crear Usuario
+                    </Button>
+                </div>
+            </Form>
+        </div>
         )
     }
 }export default AddUser
