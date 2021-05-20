@@ -1,4 +1,4 @@
-import React   from 'react';
+import React from 'react';
 import { Card, Button, Row, Container, Col } from 'react-bootstrap';
 
 class SingleitemViewer extends React.Component {
