@@ -4,3 +4,5 @@ client/package.json
 afdmin.js
 test.py
 api/clases/dataBaseMediator.js
+api/node_modules
+client/node_modules
