@@ -23,15 +23,15 @@ class Login extends React.Component<LoginProps, LoginState> {
 		};
 	}
 
-	private handleChangeE(event) {
+	private handleChangeE(event: any) {
 		this.setState({ email: event.target.value });
 	}
 
-	private handleChangeP(event) {
+	private handleChangeP(event: any) {
 		this.setState({ pass: event.target.value });
 	}
 
-	private handleSubmit(event) {
+	private handleSubmit(event: any) {
 		let params = {
 			email: this.state.email,
 			pass: this.state.pass,
