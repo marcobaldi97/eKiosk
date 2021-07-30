@@ -1,10 +1,21 @@
 import React from "react";
+
 import SingleCommentViewer from "../SingleCommentViewer/SingleCommentViewer";
 import { Card, Button, Row, Container, Col, Carousel } from "react-bootstrap";
 
-class ItemPage extends React.Component {
-	constructor(props) {
+interface ItemPageProps {}
+
+interface ItemPageState {
+	productName: string;
+	productDesc: string;
+	productPrice: string;
+	productImgs: any[];
+}
+
+class ItemPage extends React.Component<ItemPageProps, ItemPageState> {
+	constructor(props: ItemPageProps) {
 		super(props);
+
 		this.state = {
 			productName: "Bubbaloo",
 			productDesc: "Un chicle hecho de goma con sabor...",

@@ -30,15 +30,15 @@ class AddUser extends React.Component<AddUserProps, AddUserState> {
 			pass: "",
 			pass2: "",
 			nombre: "",
-			emailDisp: null,
+			emailDisp: false,
 		};
 	}
 
-	private handleChangeE(event) {
+	private handleChangeE(event: any) {
 		this.setState({ email: event.target.value });
 	}
 
-	private handleBlurE(event) {
+	private handleBlurE(event: any) {
 		let params = {
 			email: this.state.email,
 		};
@@ -59,31 +59,31 @@ class AddUser extends React.Component<AddUserProps, AddUserState> {
 		event.preventDefault();
 	}
 
-	private handleChangeP(event) {
+	private handleChangeP(event: any) {
 		this.setState({ pass: event.target.value });
 	}
 
-	private handleBlurP(event) {
+	private handleBlurP(event: any) {
 		//if(this.state.pass === "")
 		//alert("Pass vacía")
 	}
 
-	private handleChangeP2(event) {
+	private handleChangeP2(event: any) {
 		this.setState({ pass2: event.target.value });
 	}
 
-	private handleBlurP2(event) {
+	private handleBlurP2(event: any) {
 		console.log(this.state.pass + " ## " + this.state.pass2);
 		if (this.state.pass !== this.state.pass2) {
 			//alert("Las contraseñas son diferentes, capo")
 		}
 	}
 
-	private handleChangeN(event) {
+	private handleChangeN(event: any) {
 		this.setState({ nombre: event.target.value });
 	}
 
-	private handleSubmit(event) {
+	private handleSubmit(event: any) {
 		this.handleBlurE(event);
 		if (this.state.pass === this.state.pass2 && this.state.emailDisp) {
 			let params = {
